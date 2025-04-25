@@ -1,0 +1,15 @@
+/* Header - Maka */
+/* Upper header*/
+/* 1920 Resolution */
+@media screen and (min-width: 1920px) {
+  header {
+    background-color: white;
+    max-width: 1920px;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+    
+    
+}
