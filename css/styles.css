@@ -1,9 +1,18 @@
+:root {
+    --background-color: white;
+    --light-grey: #E2E7F0;
+    --dark-grey: #4A5468;
+    --font: "FiraGo", sans-serif;
+
+}
+
+
 /* Header - Maka */
 /* Upper header*/
 /* 1920 Resolution */
 @media screen and (max-width: 1920px) {
-  header {
-    background-color: white;
+  .upper-header {
+    background-color: var(--background-color);
     max-width: 1920px;
     height: 80px;
     display: flex;
@@ -20,6 +29,7 @@
         font-size: 34px;
         color: red;
         font-weight: 700;
+        font-family: var(--font);
     }
     .search-container {
         display: flex;
@@ -40,6 +50,7 @@
         padding-left: 16px;
         color: #4A5468;
         font-size: 16px;
+        font-family: var(--font);
     }
     .search-icon {
         padding-right: 4px;
@@ -58,8 +69,8 @@
 }
 /* 1240 Resolution */
 @media screen and (max-width: 1240px) {
-    header {
-      background-color: white;
+    .upper-header {
+      background-color: var(--background-color);
       max-width: 1240px;
       height: 80px;
       display: flex;
@@ -77,6 +88,7 @@
           font-size: 28px;
           color: red;
           font-weight: 700;
+          font-family: var(--font);
       }
       .search-container {
           display: flex;
@@ -97,6 +109,7 @@
           padding-left: 16px;
           color: #4A5468;
           font-size: 16px;
+          font-family: var(--font);
       }
       .search-icon {
           padding-right: 4px;
@@ -115,8 +128,8 @@
   }
   /* 1024 Resolution */
 @media screen and (max-width: 1024px) {
-    header {
-      background-color: white;
+    .upper-header {
+      background-color: var(--background-color);
       max-width: 1024px;
       height: 80px;
       display: flex;
@@ -134,7 +147,7 @@
           font-size: 24px;
           color: red;
           font-weight: 700;
-          
+          font-family: var(--font);
          
       }
       .search-container {
@@ -159,6 +172,7 @@
           padding-left: 16px;
           color: #4A5468;
           font-size: 16px;
+          font-family: var(--font);
       }
       .search-icon {
           padding-right: 4px;
@@ -180,8 +194,8 @@
 }
  /* 360 Resolution */
  @media screen and (max-width: 360px) {
-    header {
-      background-color: white;
+    .upper-header {
+      background-color: var(--background-color);
       max-width: 360px;
       height: 72px;
       display: flex;
@@ -198,7 +212,7 @@
           font-size: 16px;
           color: red;
           font-weight: 700;
-          
+          font-family: var(--font);
         
       }
  .search-container {
@@ -218,3 +232,72 @@
         cursor: pointer;
     }
  }
+ /* Lower header */
+/* 1920 Resolution */
+@media screen and (max-width: 1920px) {
+
+    .lower-header {
+        background-color: #E2E7F0;
+        max-width: 1920px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 33.4px;
+       
+    }
+    nav ul li {
+        list-style: none;
+        color:var(--dark-grey);
+        font-size: 16px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: var(--dark-grey);
+        font-size: 16px;
+        font-family: var(--font);
+    }
+    nav ul li a:hover {
+        color: rgb(109, 107, 129);
+        
+    }
+}
+/* 1240 Resolution */
+@media screen and (max-width: 1240px) {
+
+    .lower-header {
+        background-color: #E2E7F0;
+        max-width: 1240px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 49.13px;
+       
+    }
+    nav ul li {
+        list-style: none;
+        color:var(--dark-grey);
+        font-size: 16px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: var(--dark-grey);
+        font-size: 16px;
+        font-family: var(--font);
+    }
+    nav ul li a:hover {
+        color: rgb(109, 107, 129);
+        
+    }
+}
