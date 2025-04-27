@@ -281,3 +281,9 @@
         
     }
 }
+/* 19240 Resolution */
+@media screen and (max-width: 1240px) {
+    .lower-header {
+        display: none;
+    }
+}
