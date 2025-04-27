@@ -13,13 +13,16 @@
 @media screen and (max-width: 1920px) {
   .upper-header {
     background-color: var(--background-color);
-    max-width: 1920px;
+
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 304px;
-    padding-right: 304px;
+    
+  }
+  .container {
+    max-width: 1920px;
+    padding: 0 304px;
   }
     .social-media {
         display: flex;
@@ -71,15 +74,18 @@
 @media screen and (max-width: 1240px) {
     .upper-header {
       background-color: var(--background-color);
-      max-width: 1240px;
+      
       height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-left: 56px;
-      padding-right: 56px;
+      
       
     }
+    .container {
+        max-width: 1240px;
+        padding: 0 56px;
+      }
       .social-media {
           display: flex;
           gap: 8px
@@ -130,15 +136,18 @@
 @media screen and (max-width: 1024px) {
     .upper-header {
       background-color: var(--background-color);
-      max-width: 1024px;
+       
       height: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-left: 48px;
-      padding-right: 48px;
+    
       
     }
+    .container {
+        max-width: 1024px;
+        padding: 0 48px
+      }
       .social-media {
           display: none;
           gap: 8px
@@ -196,14 +205,19 @@
  @media screen and (max-width: 360px) {
     .upper-header {
       background-color: var(--background-color);
-      max-width: 360px;
+    
       height: 72px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0;
+     
       
     }
+    .container {
+        max-width: 360px;
+        padding:0
+        
+      }
       .social-media {
           display: none;
           gap: 8px
@@ -249,40 +263,6 @@
         justify-content: center;
         align-items: center;
         gap: 33.4px;
-       
-    }
-    nav ul li {
-        list-style: none;
-        color:var(--dark-grey);
-        font-size: 16px;
-    }
-    nav ul li a {
-        text-decoration: none;
-        color: var(--dark-grey);
-        font-size: 16px;
-        font-family: var(--font);
-    }
-    nav ul li a:hover {
-        color: rgb(109, 107, 129);
-        
-    }
-}
-/* 1240 Resolution */
-@media screen and (max-width: 1240px) {
-
-    .lower-header {
-        background-color: #E2E7F0;
-        max-width: 1240px;
-        height: 52px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .nav-list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 49.13px;
        
     }
     nav ul li {
