@@ -244,6 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   createMobileSlides();
+  setInterval(nextSlide, 5000);
   document
     .querySelector(".mobile_slider_prev")
     .addEventListener("click", prevMobileSlide);
