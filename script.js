@@ -144,5 +144,110 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   createSlides();
-  //   setInterval(nextSlide, 5000);
+  setInterval(nextSlide, 5000);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Slide data with image paths
+  const mobile_slider_data = [
+    {
+      image: "Images/slider-img/slider.png",
+      date: "18.03.2024",
+      title:
+        "ქვემო ქართლის რეგიონში 20 მლნ ლარამდე ღირებულების სამელიორაციოინფრასტრუქტურული პროექტები დაიწყება",
+      category: "პოლიტიკა",
+    },
+    {
+      image: "images/slider-img/slider-1.png",
+      date: "20.03.2024",
+      title: "სამთო კურორტებზე ახალი ტურისტული სეზონი იწყება",
+      category: "ტურიზმი",
+    },
+    {
+      image: "images/slider-img/slider-2.png",
+      date: "22.03.2024",
+      title: "თბილისში ახალი კულტურული ცენტრი გაიხსნა",
+      category: "კულტურა",
+    },
+    {
+      image: "images/slider-img/slider-3.png",
+      date: "25.03.2024",
+      title:
+        "საქართველოს მთიან რეგიონებში ინტერნეტის ხელმისაწვდომობა გაიზრდება",
+      category: "ტექნოლოგია",
+    },
+  ];
+
+  const mobile_slider_images_container = document.getElementById(
+    "mobile_slider_images"
+  );
+  const mobile_slider_content_container = document.getElementById(
+    "mobile_slider_content"
+  );
+  let mobile_current_slide = 0;
+
+  // Mobile Slider
+  function createMobileSlides() {
+    mobile_slider_images_container.innerHTML = "";
+
+    mobile_slider_data.forEach((slide, index) => {
+      const imgElement = document.createElement("img");
+      imgElement.className = `mobile_slider_image ${
+        index === 0 ? "active" : ""
+      }`;
+      imgElement.src = slide.image;
+      imgElement.alt = slide.title;
+
+      mobile_slider_images_container.appendChild(imgElement);
+    });
+
+    updateMobileContent(0);
+  }
+
+  function updateMobileContent(index) {
+    const slide = mobile_slider_data[index];
+
+    mobile_slider_content_container.innerHTML = `
+          <div class="mobile_slider_category_date">
+              <span class="mobile_slider_category">${slide.category}</span>
+              <span class="mobile_slider_date_separator">•</span>
+              <span class="mobile_slider_date">${slide.date}</span>
+          </div>
+          <h2 class="mobile_slider_title">${slide.title}</h2>
+      `;
+  }
+
+  function prevMobileSlide() {
+    navigateMobileSlides(
+      (mobile_current_slide - 1 + mobile_slider_data.length) %
+        mobile_slider_data.length
+    );
+  }
+
+  function nextMobileSlide() {
+    navigateMobileSlides(
+      (mobile_current_slide + 1) % mobile_slider_data.length
+    );
+  }
+
+  function navigateMobileSlides(index) {
+    document
+      .querySelectorAll(".mobile_slider_image")
+      [mobile_current_slide].classList.remove("active");
+
+    mobile_current_slide = index;
+    document
+      .querySelectorAll(".mobile_slider_image")
+      [mobile_current_slide].classList.add("active");
+
+    updateMobileContent(mobile_current_slide);
+  }
+
+  createMobileSlides();
+  document
+    .querySelector(".mobile_slider_prev")
+    .addEventListener("click", prevMobileSlide);
+  document
+    .querySelector(".mobile_slider_next")
+    .addEventListener("click", nextMobileSlide);
 });
