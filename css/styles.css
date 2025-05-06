@@ -414,13 +414,7 @@ z-index: 100;}
 
 /* Main */
 /* Mariam */
-:root {
-    --background-color: white;
-    --light-grey: #edf0f7;
-    --dark-grey: #4a5468;
-    --font-family: "FiraGo", sans-serif;
-  }
-  
+
   .mobile_slider_container {
     display: none;
   }
