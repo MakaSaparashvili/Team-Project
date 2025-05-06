@@ -711,9 +711,9 @@ z-index: 100;}
   /* 1920 რეზოლუციაზე ჩავამატე */
 @media screen and (max-width:1920px) {
   .section-grid {
-   width: 1312px;
-    margin:0;
-    padding: 0 304px ;
+   width: 1312px !important;
+    margin:0 !important;
+    padding: 0 304px  !important;
   }
   .news-layout {
     width: 1312px;
@@ -743,9 +743,9 @@ z-index: 100;}
    /* 1240 რეზოლუციაზე ჩავამატე */
   @media screen and (max-width: 1240px) {
     .section-grid {
-      width: 1128px;
-      margin: 0;
-      padding: 0 56px;
+      width: 1128px !important;
+      margin: 0 !important;
+      padding: 0 56px !important;
     }
     .news-layout {
       width: 1128px;
@@ -754,9 +754,9 @@ z-index: 100;}
 /* 1024 რეზოლუციაზე ჩავამატე */
   @media screen and (max-width: 1024px) {
     .section-grid {
-      width: 928px;
-      margin: 0;
-      padding: 0 48px;
+      width: 928px !important;
+      margin: 0 !important;
+      padding: 0 48px !important;
     }
     .news-layout {
       width: 928px;
@@ -765,20 +765,20 @@ z-index: 100;}
 /* 360 რეზოლუციაზე ჩავამატე */
   @media screen and (max-width: 360px) {
     .section-grid {
-      width: 328px;
-      margin: 0;
-      padding: 0 16px;
+      width: 328px !important;
+      margin: 0 !important;
+      padding: 0 16px !important;
     }
     .news-layout {
       width: 328px;
     }
     .image-center {
-      height: 181px;
-      border-radius: 12px;
+      height: 181px !important;
+      border-radius: 12px !important;
     }
     .image-left1, .image-left2, .image-right1, .image-right2 {
-      border-radius: 12px;
-      height: 140px;
+      border-radius: 12px !important;
+      
     }
     
   }
